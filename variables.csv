@@ -30,5 +30,5 @@ X,X,1
 ❌,,reserved
 ❎,,reserved
 ╳,,reserved
-✕,,"all inputs, whitespace delineated"
+✕,,q\" \"/~
 ✗,,ea0=

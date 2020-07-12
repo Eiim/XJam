@@ -56,6 +56,21 @@ public class XJam {
 		setVar('X', 1l);
 		setVar('Y', 2l);
 		setVar('Z', 3l);
+		
+		// XJam vars
+		for (int i = 0; i < 11; ++i) { // Bold Serif Capital X to Bold Fraktur Capital X = 10 to 20
+			var[i] = i;
+		}
+		var[13] = Conv.strToList("\n");
+		var[15] = Math.PI;
+		var[18] = Conv.strToList(" ");
+		var[19] = 0l;
+		var[20] = 0l;
+		var[21] = 0l;
+		var[22] = -1l;
+		var[24] = 2l;
+		var[25] = 3l;
+		var[25] = Math.E;
 	}
 	
 	public void checkType(final Object x) {
@@ -107,15 +122,15 @@ public class XJam {
 	}
 	
 	public Object getVar(final char c) {
-		return var[c - 'A'];
+		return var[c];
 	}
 	
 	public void setVar(final char c, final Object x) {
 //		checkType(x);
-		if (c < 'A' || c > 'Z') {
-			throw new IllegalArgumentException("Invalid variable name: " + c);
-		}
-		var[c - 'A'] = x;
+//		if (c < 'A' || c > 'Z') {
+//			throw new IllegalArgumentException("Invalid variable name: " + c);
+//		}
+		var[c] = x;
 	}
 	
 	public String readNext() {

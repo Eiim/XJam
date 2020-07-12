@@ -257,7 +257,7 @@ public class Block extends Op {
 				throw new RuntimeException("Unfinished operator: :");
 			}
 			sb.append(c1);
-			if (c1 >= 'A' && c1 <= 'Z') {
+			if ((c1 >= 0 && c1 <= 25) || c1 == 'X') {
 				return Ops.setVar(c1);
 			}
 			op = parseOp(cs, sb, c1);
