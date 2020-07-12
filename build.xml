@@ -1,0 +1,35 @@
+<project name="xjam" default="jar">
+	<property name="build" value="build"/>
+	<property name="bin" value="${build}/bin"/>
+	<property name="jar" value="${build}/${ant.project.name}.jar"/>
+	<property name="src" value="${build}/${ant.project.name}-sources.zip"/>
+	<property name="build.compiler" value="javac1.6"/>
+
+	<target name="compile">
+		<delete dir="${bin}"/>
+		<mkdir dir="${bin}"/>
+		<javac includeAntRuntime="false" srcdir="src" destdir="${bin}" source="1.6" target="1.6" debug="on"
+			excludes="**/test/**"/>
+	</target>
+	
+	<target name="jar" depends="compile">
+		<delete file="${jar}"/>
+		<jar destfile="${jar}">
+			<fileset dir="${bin}"/>
+			<manifest>
+				<attribute name="Main-Class" value="dne.eiim.xjam.XJam"/>
+			</manifest>
+		</jar>
+	</target>
+	
+	<target name="src">
+		<delete file="${src}"/>
+		<zip destfile="${src}">
+			<fileset dir=".">
+				<exclude name="bin/**"/>
+				<exclude name="build/**"/>
+				<exclude name="local/**"/>
+			</fileset>
+		</zip>
+	</target>
+</project>
