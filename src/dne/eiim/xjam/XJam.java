@@ -16,7 +16,7 @@ public class XJam {
 			BigInteger.class, Character.class, Block.class));
 	
 	private List<Object> stack;
-	private Object[] var = new Object[26];
+	private Object[] var = new Object[128];
 	private final In in;
 	private final Out out;
 	private final Out err;
