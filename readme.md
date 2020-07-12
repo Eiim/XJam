@@ -8,4 +8,4 @@ XJam is an esoteric programming language built on [CJam](https://sourceforge.net
 codepoints.txt contains a list of the current characters (128 of them) in order of what their codepoint mappings should be.
 variables.csv documents the differences between variables in CJam and XJam.
 
-In the future, more joke functionality is also planned, such as a function that is supposed to be passed a password and [crashes if it is a resolvable URL(https://xkcd.com/1700/)]. Based on the alt-text, maybe the password will be otherwise salted with emoji!
+In the future, more joke functionality is also planned, such as a function that is supposed to be passed a password and [crashes if it is a resolvable URL](https://xkcd.com/1700/). Based on the alt-text, maybe the password will be otherwise salted with emoji!
